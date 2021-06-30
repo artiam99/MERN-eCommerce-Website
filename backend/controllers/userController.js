@@ -1,7 +1,7 @@
 const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
 const generateToken = require('../utils/generateTokens')
-const { sendWelcomeMail , sendCancelationMail } = require('../emails/account')
+const { sendWelcomeMail , sendCancelationMail } = require('../email/account')
 
 const authUser = asyncHandler(async (req , res) =>
 {
@@ -132,9 +132,9 @@ const deleteUser = asyncHandler(async (req , res) =>
   
     if (user)
     {
-        await user.remove()
-
         sendCancelationMail(user.email , user.name)
+
+        await user.remove()
 
         res.json({ message: 'User removed' })
     }
