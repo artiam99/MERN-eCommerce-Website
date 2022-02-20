@@ -5,9 +5,8 @@ Live website link: https://shoppikart-maitra.herokuapp.com
 
 ### About
 
-This MERN Full stack web application is an eCommerce Platform built with ReactJS for frontend,
-ExpressJS for creating REST API, MongoDB for database, React-Bootstrap for the UI library and Redux for managing application states.
-It is deployed on Heroku.
+This MERN Full stack web application is an eCommerce Platform built with __React.js__ for frontend,
+__Express.js__ for creating REST API, __MongoDB__ for database, __React-Bootstrap__ for the UI library and __Redux__ for managing application states. It supports authentication with JSON Web Token for admin and customer users. Customers can search products by name or brand and Admins can add new products & edit details. It is deployed on __Heroku__.
 
 
 ### Home Screen
